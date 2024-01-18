@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'temporaryfont';
+    /* src: url('circe-slab_a-hairline.woff') format('woff'); */
+    /* src: url('kudry_weird-display.woff') format('woff'); */
+    /* src: url('Nagel_Oblique.woff') format('woff'); */
+    /* src: url('Finis.otf') format('opentype'); */
+    src: url('Nagel_Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 50px;
+    background-color: aliceblue;
+}
+
+button {
+    height: fit-content;
+    width: fit-content;
+    padding: 20px;
+}
+
+#capture {
+    position: relative;
+    font-family: 'temporaryfont', Arial, sans-serif;
+    padding-top: 35px;
+    background-color: #fff;
+    /* border: 1px solid #058f9f; */
+    width: 1440px;
+    height: 720px;
+    display: grid;
+    grid: repeat(3, 190px 30px) / auto-flow 468px 114px 140px 60px 140px 60px 137px 60px 144px 60px;
+}
+
+#dropArea {
+    width: 600px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    text-align: center;
+    line-height: 150px;
+    font-size: 16px;
+}
+
+.c1 {
+    color: #058f9f;
+}
+
+.c2 {
+    color: #e5990a;
+}
+
+.vert1 {
+    grid-row: 1/3;
+}
+
+.vert2 {
+    grid-row: 3/5;
+}
+
+.vert3 {
+    grid-row: 5/7;
+}
+
+.big {
+    grid-row: 1/7;
+    padding-left: 67px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bigvert {
+    grid-row: 1/7;
+    padding-left: 20px;
+    writing-mode: vertical-rl;
+    justify-content: end;
+    text-align: right;
+    transform: rotate(180deg);
+}
+
+.bighoriz {
+    position: absolute;
+    bottom: 20px;
+}
+
+.bigtext {
+    font-size: 75px;
+    line-height: 1;
+    display: flex;
+    align-items: end;
+}
+
+.mainletter {
+    font-size: 565px;
+    height: 574px;
+    display: flex;
+    vertical-align: top;
+    justify-content: center;
+}
+
+.smallvert {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 38px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.letter {
+    font-size: 165px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: -10px; */
+}
+
+.small {
+    padding-left: 5px;
+    font-size: 21px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+label {
+    display: block;
+    width: 180px;
+}
+
+.parameters {
+    display: flex;
+    padding: 0 0 20px 0;
+}
+
+.wrap {
+    padding-top: 30px;
+    width: 1440px;
+    display: flex;
+    justify-content: space-between;
+}

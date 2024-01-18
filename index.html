@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Применение шрифта с помощью drag-and-drop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <!-- <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/fontfaceobserver/2.0.13/fontfaceobserver.standalone.js"></script> -->
+</head>
+
+<body>
+    <div id="capture">
+        <div class="big">
+            <div class="mainletter c1">ß</div>
+            <div class="bigtext bighoriz c1">German</div>
+        </div>
+        <div class="bigtext bigvert c1">Straße</div>
+        <div class="letter c1">é</div>
+        <div class="small c1">french</div>
+        <div class="letter c2">å</div>
+        <div class="small c2">swedish</div>
+        <div class="letter c1">û</div>
+        <div class="small c1">turkish</div>
+        <div class="smallvert vert1 c1">échinacée</div>
+        <div class="smallvert vert2 c2">åkerbruk</div>
+        <div class="smallvert vert3 c1">sükûnet</div>
+        <div class="letter c2">ä</div>
+        <div class="small c2">estonian</div>
+        <div class="letter c1">ñ</div>
+        <div class="small c1">spanish</div>
+        <div class="letter c2">ø</div>
+        <div class="small c2">norwegian</div>
+        <div class="smallvert vert1 c2">ääris</div>
+        <div class="smallvert vert2 c1">mañana</div>
+        <div class="smallvert vert3 c2">høgnorsk</div>
+        <div class="letter c1">ұ</div>
+        <div class="small c1">kazakh</div>
+        <div class="letter c2">ї</div>
+        <div class="small c2">ukrainian</div>
+        <div class="letter c1">ž</div>
+        <div class="small c1">czech</div>
+        <div class="smallvert vert1 c1">құрамын</div>
+        <div class="smallvert vert2 c2">Київ</div>
+        <div class="smallvert vert3 c1">život</div>
+        <div class="letter c2">ī</div>
+        <div class="small c2">latvian</div>
+        <div class="letter c1">җ</div>
+        <div class="small c1">kalmyk</div>
+        <div class="letter c2">љ</div>
+        <div class="small c2">serbian</div>
+        <div class="smallvert vert1 c2">īpašvārd</div>
+        <div class="smallvert vert2 c1">җидңһ</div>
+        <div class="smallvert vert3 c2">љага</div>
+    </div>
+    <div class="wrap">
+        <div class="pcontainer">
+            <div class="parameters">
+                <p><label for="sliderLetters">Масштаб букв&nbsp;</label><input type="range" min="0.5" max="2" value="1"
+                        step="0.05" id="sliderLetters"></p>
+                <p><label for="sliderLettersPos">Позиция букв&nbsp;</label><input type="range" min="-100" max="100"
+                        value="0" step="1" id="sliderLettersPos"></p>
+            </div>
+            <div class="parameters">
+                <p><label for="sliderWords">Масштаб слов&nbsp;</label><input type="range" min="0.5" max="2" value="1"
+                        step="0.05" id="sliderWords"></p>
+                <p><label for="sliderWordsPos">Позиция крупных слов&nbsp;</label><input type="range" min="-100"
+                        max="100" value="25" step="1" id="sliderWordsPos"></p>
+            </div>
+            <div class="parameters">
+                <p><label for="sliderMain">Масштаб главной буквы&nbsp;</label><input type="range" min="0.5" max="2"
+                        value="1" step="0.05" id="sliderMain"></p>
+                <p><label for="sliderMainPos">Позиция главной буквы&nbsp;</label><input type="range" min="-300"
+                        max="300" value="0" step="5" id="sliderMainPos"></p>
+            </div>
+        </div>
+        <div id="dropArea" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+            Перетащите файл с шрифтом сюда
+        </div>
+        <button onclick="capture()">Сохранить как изображение (png)</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
